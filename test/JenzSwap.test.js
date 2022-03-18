@@ -97,7 +97,7 @@ contract('JenzSwap', ([deployer, invester]) => {
       assert.equal(jenzswapEtherBalance.toString(), tokens('0'))
 
       const event = result.logs[0].args
-      assert.equal(event.account, invester)
+      assert.equal(event.seller, invester)
       assert.equal(event.token, token.address)
       assert.equal(event.amount.toString(), tokens('100'))
       assert.equal(event.rate.toString(), '100')
